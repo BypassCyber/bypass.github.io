@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Contact Bypass - Ghana's Leading Cybersecurity Solutions Provider" />
+  <meta name="author" content="Bypass" />
+  <title>Contact Us | Bypass</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP for Smooth Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    .contact-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/contact-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #0d6efd;
+    }
+
+    .contact-card {
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .map-container {
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Bypass" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <section class="contact-hero text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" id="hero-content">
+          <h1 class="display-4 fw-bold mb-4">Get in Touch</h1>
+          <p class="lead mb-0">Let's discuss how we can protect your digital assets and strengthen your cybersecurity posture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information Cards -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4" id="card-1">
+          <div class="contact-card bg-white p-4 text-center rounded-3 shadow-sm h-100">
+            <div class="mb-3">
+              <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-3">Visit Us</h5>
+            <p class="text-muted mb-0">123 Tech Hub Street<br>Accra, Ghana</p>
+          </div>
+        </div>
+        <div class="col-md-4" id="card-2">
+          <div class="contact-card bg-white p-4 text-center rounded-3 shadow-sm h-100">
+            <div class="mb-3">
+              <i class="fas fa-phone fa-2x text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-3">Call Us</h5>
+            <p class="text-muted mb-0">+233 123456789<br>Mon-Fri, 9am-6pm GMT</p>
+          </div>
+        </div>
+        <div class="col-md-4" id="card-3">
+          <div class="contact-card bg-white p-4 text-center rounded-3 shadow-sm h-100">
+            <div class="mb-3">
+              <i class="fas fa-envelope fa-2x text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-3">Email Us</h5>
+            <p class="text-muted mb-0">info@bypass.com<br>support@bypass.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6" id="form-container">
+          <h2 class="fw-bold mb-4">Send Us a Message</h2>
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">Please provide your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Please provide a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" required>
+              <div class="invalid-feedback">Please provide your phone number.</div>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" required>
+              <div class="invalid-feedback">Please provide a subject.</div>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+              <div class="invalid-feedback">Please provide your message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          </form>
+        </div>
+        <div class="col-lg-6" id="map-container">
+          <h2 class="fw-bold mb-4">Our Location</h2>
+          <div class="map-container">
+            <!-- Replace src with your actual Google Maps embed code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9735600972417!2d-0.1870192!3d5.6037168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMTMuNCJOIDDCsDExJzEzLjMiVw!5e0!3m2!1sen!2sgh!4v1635789876543!5m2!1sen!2sgh" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5 class="mb-4">About Bypass</h5>
+          <p class="mb-4">Ghana's leading cybersecurity solutions provider, protecting businesses through innovative security strategies and cutting-edge technology.</p>
+          <div class="social-links">
+            <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <h5 class="mb-4">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white">Services</a></li>
+            <li class="mb-2"><a href="#" class="text-white">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="mb-4">Services</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white">Network Security</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Data Protection</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Security Training</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="mb-4">Newsletter</h5>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright -->
+  <div class="bg-darker text-white py-3">
+    <div class="container text-center">
+      <small>&copy; <span id="currentYear"></span> Bypass. All rights reserved.</small>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Form Validation
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+
+    // Current Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear()
+
+    // GSAP Animations
+    gsap.from("#hero-content", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: 0.3
+    })
+
+    gsap.from(["#card-1", "#card-2", "#card-3"], {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      stagger: 0.2,
+      delay: 0.5
+    })
+
+    gsap.from("#form-container", {
+      opacity: 0,
+      x: -50,
+      duration: 1,
+      delay: 0.7
+    })
+
+    gsap.from("#map-container", {
+      opacity: 0,
+      x: 50,
+      duration: 1,
+      delay: 0.7
+    })
+  </script>
+</body>
+
+</html>
